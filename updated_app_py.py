@@ -33,7 +33,7 @@ custom_css = """
 
     /* Headers */
     h1, h2, h3, h4, h5, h6 {
-        color: #FFFFFF;
+        color: #E0E0E0;
         font-family: 'Arial', sans-serif;
         font-weight: 600;
     }
