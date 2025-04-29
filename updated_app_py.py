@@ -25,6 +25,11 @@ custom_css = """
         color: #E0E0E0;
     }
 
+    /* Default font color for unstyled elements */
+    body, p, div, span, label, li, td, th {
+        color: #E0E0E0 !important;
+    }
+
     /* Sidebar styling */
     [data-testid="stSidebar"] {
         background-color: #141823;
