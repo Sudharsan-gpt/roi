@@ -113,6 +113,12 @@ custom_css = """
     /* Slider color */
     .stSlider > div > div > div {
         background-color: #0085FF !important;
+    
+    /* Chart legend text color */
+    .js-plotly-plot .legend text {
+        fill: #E0E0E0 !important;
+    }
+
     }
 </style>
 """
