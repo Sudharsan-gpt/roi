@@ -47,8 +47,8 @@ custom_css = """
     }
     
     [data-testid="stMetricLabel"] {
-        color: #B0B9C5;
-        font-size: 1rem !important;
+        color: #FFFFFF;
+        font-size: 1.2rem !important;
     }
     
     [data-testid="stMetricValue"] {
