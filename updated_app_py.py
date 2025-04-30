@@ -19,10 +19,11 @@ LICENSE_COST_PER_VESSEL_PER_MONTH = 300  # USD
 # ----------------- Custom CSS for futuristic UI -------------------
 custom_css = """
 <style>
+    
     /* Main Background and Text */
     [data-testid="stAppViewContainer"] {
         background-color: #1E2637;
-        color: #E0E0E0;
+        color: #e1e7f5;
     }
 
     /* Default font color for unstyled elements */
@@ -129,7 +130,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # ----------------- Title and Subtitle -------------------
 col_title_left, col_title_right = st.columns([3, 1])
 with col_title_left:
-    st.markdown("<h1 style='font-size:32px;'>🌊 Maritime Applications ROI Calculator</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='font-size:32px;'>🌊 Applications ROI Calculator</h1>", unsafe_allow_html=True)
 with col_title_right:
     view_3_years = st.checkbox("View 3-Year ROI", value=False)
 
