@@ -8,13 +8,13 @@ from plotly.subplots import make_subplots
 
 # Set page configuration
 st.set_page_config(
-    page_title="Maritime App ROI Calculator",
+    page_title="Applications ROI Calculator",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # ----------------- Constants -------------------
-LICENSE_COST_PER_VESSEL_PER_MONTH = 500  # USD
+LICENSE_COST_PER_VESSEL_PER_MONTH = 300  # USD
 
 # ----------------- Custom CSS for futuristic UI -------------------
 custom_css = """
@@ -136,9 +136,9 @@ with col_title_right:
 # ----------------- Sidebar Inputs -------------------
 st.sidebar.markdown("<h3 style='color:#FFFFFF;'>🛠️ Input Parameters</h3>", unsafe_allow_html=True)
 
-fleet_size = st.sidebar.number_input("Fleet Size", min_value=1, value=10, step=1)
+fleet_size = st.sidebar.number_input("Fleet Size (Vessel Count)", min_value=1, value=10, step=1)
 fuel_price = st.sidebar.number_input("Fuel Price ($/MT)", min_value=1.0, value=550.0)
-daily_consumption = st.sidebar.number_input("Daily Fuel Consumption (MT)", min_value=1.0, value=50.0)
+daily_consumption = st.sidebar.number_input("Daily Avg Fuel Consumption (MT)", min_value=1.0, value=50.0)
 operating_days = st.sidebar.number_input("Operating Days", min_value=1, value=330, step=1)
 
 # ----------------- Customizable Applications -------------------
@@ -146,12 +146,12 @@ st.sidebar.markdown("<h3 style='color:#FFFFFF;'>📋 Application Settings</h3>",
 
 # Define applications with their respective ranges and default values
 applications = {
-    "Hull & Performance": {"min": 0.0, "max": 8.0, "default": 3.0, "icon": "🛥️"},
-    "Voyage Optimization": {"min": 0.0, "max": 6.0, "default": 2.0, "icon": "🧭"},
-    "Emission App": {"min": 0.0, "max": 5.0, "default": 1.5, "icon": "🌿"},
-    "Vessel Scorecard": {"min": 0.0, "max": 5.0, "default": 1.0, "icon": "📊"},
-    "Weather Routing": {"min": 0.0, "max": 4.0, "default": 0.0, "icon": "☁️"},
-    "Fuel Efficiency": {"min": 0.0, "max": 7.0, "default": 0.0, "icon": "⛽"}
+    "Hull Maintainance App": {"min": 0.0, "max": 15.0, "default": 3.0, "icon": "🛥️"},
+    "Voyage Optimization App": {"min": 0.0, "max": 6.0, "default": 2.0, "icon": "🧭"},
+    "Emission App": {"min": 0.0, "max": 3.0, "default": 1.5, "icon": "🌿"},
+    "Performance App": {"min": 0.0, "max": 3.0, "default": 1.0, "icon": "📊"},
+    "Propulsion Pro": {"min": 0.0, "max": 4.0, "default": 0.0, "icon": "☁️"},
+    "Bunker management": {"min": 0.0, "max": 7.0, "default": 0.0, "icon": "⛽"}
 }
 
 # Store selected applications and their saving percentages
@@ -443,6 +443,6 @@ if view_3_years:
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("""
 <div style="text-align: center; color: #7A8999; font-size: 0.8rem;">
-    ⚓ Built for Maritime Digitalization | Futuristic Dashboard v2.0
+    ⚓ Built for Maritime Performance and Digitalization | Application Dashboard v2.0
 </div>
 """, unsafe_allow_html=True)
